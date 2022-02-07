@@ -209,6 +209,6 @@ script:
         --rm \
         --workdir /travis \
         --volume ${TRAVIS_BUILD_DIR}:/travis \
-        clangbuiltlinux/ubuntu:llvm${LLVM_VERSION:-12}-latest /bin/bash -c 'chmod u+x && ./env-setup.sh && ./driver.sh && ccache -s'
+        clangbuiltlinux/ubuntu:llvm${LLVM_VERSION:-12}-latest /bin/bash -c 'chmod +x && ./env-setup.sh && ./driver.sh && ccache -s'
 after_script:
   - sleep 1
