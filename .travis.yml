@@ -1,6 +1,4 @@
 ---
-language: cpp
 arch: arm64
-compiler: gcc
 os: linux
 install: skip
