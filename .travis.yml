@@ -1,4 +1,24 @@
----
 arch: arm64
-os: linux
+language: generic
+
+env:
+- BUILD=VHT_BUILD1
+- BUILD=VHT_BUILD2
+- BUILD=VHT_BUILD3
+
 install: skip
+
+script:
+- uname -a
+- grep ^processor /proc/cpuinfo
+- free -m
+- df -h
+- df -Th
+
+- sudo snap install core || true
+- sudo snap install core
+- sudo snap install hello-world
+- hello-world
+
+- docker info
+- docker run hello-world
