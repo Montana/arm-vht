@@ -192,10 +192,4 @@ jobs:
       if: type = cron
 compiler: gcc
 os: linux
-cache:
-  directories:
-    - .ccache
-services:
-  - docker
-after_script:
-  - sleep 1
+install: skip
